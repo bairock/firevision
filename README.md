@@ -19,6 +19,7 @@
     <li>GraphQL</li>
     <li>TensorflowJS</li>
     <li>YOLOv5</li>
+	<li>Python</li>
 	<li>JavaScript, Python</li>
 	<li>Styled-components</li>
 	<li>SMACSS</li>
@@ -34,7 +35,7 @@
 СРЕДА ЗАПУСКА
 ------------
 1) развертывание сервиса производится на ubuntu linux (ubuntu 20.04)
-2) требуется установленный NodeJS(версия 16.13.0) в VPS сервер
+2) требуется установленный NodeJS(версия 16.13.0)&Python(3.9.5) в VPS сервер
 3) требуется установленная Docker
 4) требуется установленный YOLO, Tensorflow, PyTorch, Cuda, Conda, CV
 
