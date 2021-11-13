@@ -1,0 +1,113 @@
+const { rule, shield, and, or, not } = require('graphql-shield')    
+
+const _default = rule({ cache: 'contextual' })(
+	async (parent, args, {}, info) => {
+		return true
+	}
+)
+
+const rules = require('./rules')
+
+const permissions = shield({
+	Query: {
+		findUniqueUser: _default,
+		findFirstUser: _default,
+		findManyUser: _default,
+		findManyUserCount: _default,
+		aggregateUser: _default,
+		findUniqueTransaction: _default,
+		findFirstTransaction: _default,
+		findManyTransaction: _default,
+		findManyTransactionCount: _default,
+		aggregateTransaction: _default,
+		findUniqueFeedback: _default,
+		findFirstFeedback: _default,
+		findManyFeedback: _default,
+		findManyFeedbackCount: _default,
+		aggregateFeedback: _default,
+		findUniqueMusic: _default,
+		findFirstMusic: _default,
+		findManyMusic: _default,
+		findManyMusicCount: _default,
+		aggregateMusic: _default,
+		findUniqueTag: _default,
+		findFirstTag: _default,
+		findManyTag: _default,
+		findManyTagCount: _default,
+		aggregateTag: _default,
+		findUniqueOrder: _default,
+		findFirstOrder: _default,
+		findManyOrder: _default,
+		findManyOrderCount: _default,
+		aggregateOrder: _default,
+		findUniqueTemplate: _default,
+		findFirstTemplate: _default,
+		findManyTemplate: _default,
+		findManyTemplateCount: _default,
+		aggregateTemplate: _default,
+		findUniqueFile: _default,
+		findFirstFile: _default,
+		findManyFile: _default,
+		findManyFileCount: _default,
+		aggregateFile: _default
+	},
+	Mutation: {
+		createOneUser: _default,
+		updateOneUser: _default,
+		deleteOneUser: _default,
+		upsertOneUser: _default,
+		deleteManyUser: _default,
+		updateManyUser: _default,
+		createOneTransaction: _default,
+		updateOneTransaction: _default,
+		deleteOneTransaction: _default,
+		upsertOneTransaction: _default,
+		deleteManyTransaction: _default,
+		updateManyTransaction: _default,
+		createOneFeedback: _default,
+		updateOneFeedback: _default,
+		deleteOneFeedback: _default,
+		upsertOneFeedback: _default,
+		deleteManyFeedback: _default,
+		updateManyFeedback: _default,
+		createOneMusic: _default,
+		updateOneMusic: _default,
+		deleteOneMusic: _default,
+		upsertOneMusic: _default,
+		deleteManyMusic: _default,
+		updateManyMusic: _default,
+		createOneTag: _default,
+		updateOneTag: _default,
+		deleteOneTag: _default,
+		upsertOneTag: _default,
+		deleteManyTag: _default,
+		updateManyTag: _default,
+		createOneOrder: _default,
+		updateOneOrder: _default,
+		deleteOneOrder: _default,
+		upsertOneOrder: _default,
+		deleteManyOrder: _default,
+		updateManyOrder: _default,
+		createOneTemplate: _default,
+		updateOneTemplate: _default,
+		deleteOneTemplate: _default,
+		upsertOneTemplate: _default,
+		deleteManyTemplate: _default,
+		updateManyTemplate: _default,
+		createOneFile: _default,
+		updateOneFile: _default,
+		deleteOneFile: _default,
+		upsertOneFile: _default,
+		deleteManyFile: _default,
+		updateManyFile: _default,
+		auth: _default,
+		signUp: _default,
+		devEndpoint: _default
+	}
+},
+{
+	allowExternalErrors: true,
+	fallbackError: 'No permission'
+})
+
+module.exports = { permissions }

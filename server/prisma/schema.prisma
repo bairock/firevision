@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Camera {
+  id           String        @id @default(cuid())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  title        String?
+  cameraNumber Int
+  url          String?
+  sizeFire     Int           @default(0)
+  dataFire     String?
+  area         String?
+  latlng       String?
+  damage       String?
+  selfExtinguishing    String?
+  distribution String?
+  squares      Json[]
+}
+

@@ -1,0 +1,37 @@
+{
+  "name": "serverfirevision",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js",
+    "migrate": "npx prisma migrate dev --name migration",
+    "generate": "node generate.js"
+  },
+  "author": "OctoM",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/merge": "^8.0.1",
+    "@graphql-tools/schema": "^8.1.1",
+    "@paljs/generator": "^3.8.2",
+    "@paljs/plugins": "^3.8.2",
+    "@paljs/schema": "^3.8.2",
+    "@prisma/client": "^2.29.1",
+    "apollo-server": "^3.1.2",
+    "apollo-server-core": "^3.1.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.1",
+    "graphql-middleware": "^6.1.2",
+    "graphql-shield": "^7.5.0",
+    "graphql-tag": "^2.12.5",
+    "jsonwebtoken": "^8.5.1",
+    "randomatic": "^3.1.1",
+    "shortid": "^2.2.16",
+    "utils": "file:src/utils/"
+  },
+  "devDependencies": {
+    "prisma": "^2.29.1"
+  }
+}
