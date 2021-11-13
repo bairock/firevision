@@ -19,6 +19,7 @@
     <li>GraphQL</li>
     <li>TensorflowJS</li>
     <li>YOLOv5</li>
+	<li>Python</li>
 	<li>JavaScript, Python</li>
 	<li>Styled-components</li>
 	<li>SMACSS</li>
@@ -34,9 +35,9 @@
 СРЕДА ЗАПУСКА
 ------------
 1) развертывание сервиса производится на ubuntu linux (ubuntu 20.04)
-2) требуется установленный NodeJS(версия 16.13.0) в VPS сервер
+2) требуется установленный NodeJS(версия 16.13.0)&Python(3.9.5) в VPS сервер
 3) требуется установленная Docker
-4) требуется установленный YOLO, PyTorch, Cuda, Conda, CV
+4) требуется установленный YOLO, Tensorflow, PyTorch, Cuda, Conda, CV
 
 
 УСТАНОВКА
@@ -69,8 +70,8 @@ npm i
 
 <h4>Оконешников Иван fullstack https://t.me/teseyoaoki9208 </h4>
 <h4>Оконешников Кынат fullstack https://t.me/baiwing </h4>
-<h4>Соловьев Айсен fullstack https://t.me/AisenSolovev </h4>
-<h4>Тагрова Дарина fullstack https://t.me/darinatagrova </h4>
-<h4>Иванов Ньургун fullstack https://t.me/Likhaaaan </h4>
+<h4>Соловьев Айсен Manager https://t.me/AisenSolovev </h4>
+<h4>Тагрова Дарина Designer https://t.me/darinatagrova </h4>
+<h4>Иванов Ньургун front-end https://t.me/Likhaaaan </h4>
 
 
