@@ -9,9 +9,9 @@ const Iframe = ({ source }) => {
 
     const src = source;     
     return (
-            <div className="col-md-12">
+            <div className="col-md-12twitch">
                 <div className="emdeb-responsive">
-                    <iframe src={src} style={{width:'100vw', height: '80vh', border:'0', bottom:'2000px'}}></iframe>
+                <iframe src="https://player.twitch.tv/?channel=teseyo&parent=localhost" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
                 </div>
             </div>
     );
