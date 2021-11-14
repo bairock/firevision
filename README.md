@@ -70,7 +70,7 @@ npm i
 
 python detect.py --source fire.mp4 --weights fire.pt --conf 0.55 || python detect.py --source smoke.mp4 --weights smoke.pt --conf 0.35
 
-Аналитика обучение и детектирование обьектов находится в папке runs
+Аналитика обучение и детектирование обьектов находится в папке runs (detect, train)
 
 РАЗРАБОТЧИКИ
 
