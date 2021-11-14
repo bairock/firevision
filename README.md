@@ -72,6 +72,8 @@ python detect.py --source fire.mp4 --weights fire.pt --conf 0.55 || python detec
 
 Аналитика обучение и детектирование обьектов находится в папке ml/runs (detect, train)
 
+датасеты были использованы для огня https://github.com/OlafenwaMoses/FireNET || для дыма https://public.roboflow.com/object-detection/wildfire-smoke
+
 РАЗРАБОТЧИКИ
 
 <h4>Оконешников Иван fullstack https://t.me/teseyoaoki9208 </h4>
