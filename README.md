@@ -66,13 +66,13 @@ npm run migrate
 npm i
 ~~~
 
-Запуск нейросети 
+<h5>Запуск нейросети</h5>
 
 python detect.py --source fire.mp4 --weights fire.pt --conf 0.55 || python detect.py --source smoke.mp4 --weights smoke.pt --conf 0.35
 
-Аналитика обучение и детектирование обьектов находится в папке ml/runs (detect, train)
+<h5>Аналитика обучение и детектирование обьектов находится в папке ml/runs (detect, train)</h5>
 
-датасеты были использованы для огня https://github.com/OlafenwaMoses/FireNET || для дыма https://public.roboflow.com/object-detection/wildfire-smoke
+<h5>датасеты были использованы для огня https://github.com/OlafenwaMoses/FireNET || для дыма https://public.roboflow.com/object-detection/wildfire-smoke</h5>
 
 РАЗРАБОТЧИКИ
 
