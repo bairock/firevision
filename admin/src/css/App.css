@@ -11,7 +11,7 @@
 .col-md-12twitch{
   width: 1vw;
   height: 62.5%;
-  z-index: 100;
+  z-index: 5;
   position: absolute;
 }
 .col-md-12{
@@ -35,8 +35,39 @@
   justify-content: flex-start;
   align-items: flex-start;
   /* position: absolute; */
-  z-index: 2;
+  z-index: 30;
   margin-bottom: 30px;
+}
+
+.fire{
+  position: absolute;
+  height: 70%;
+  width: 100%;
+  left: 1000px;
+  z-index: 20;
+}
+
+.zindex{
+  z-index: 100;
+}
+
+.fireicon{
+  height: 75px;
+  width: 75px;
+}
+
+.Cameraicon{
+  height: 577.99px;
+  width: 507.51px;
+  z-index: 20;
+}
+
+.Cameraiconbox{
+  height: 90vh;
+  width: 50vw;
+  left: 700px;
+  position: absolute;
+  z-index: 20;
 }
 
 .onecam{

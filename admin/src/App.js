@@ -8,7 +8,8 @@ import Iframe from './component/Iframe';
 import Icon from './img/Vector.png';
 import Img from './img/img.png';
 import RedIcon from './img/redfire.png';
-
+import Icons from './img/camerasa.png'
+import Fire from './img/fire.png'
 import { useQuery } from '@apollo/client'
 import { FIND_MANY_CAMERA } from './gql/quaries'
 
@@ -34,14 +35,27 @@ const App = () => {
     setSelfExtinguishing(item?.selfExtinguishing)
     setDistribution(item?.distribution)
   }
+
+  const SwitchCameras = (datas) => {
+    setUrl(datas?.url)
+    setSizeFire(datas?.sizeFire)
+    setDataFire(datas?.dataFire)
+    setArea(datas?.area)
+    setLatlng(datas?.latlng)
+    setDamage(datas?.damage)
+    setSelfExtinguishing(datas?.selfExtinguishing)
+    setDistribution(datas?.distribution)
+  }
   // rtsp://10.71.13.244:5540/ch0
   const { data, loading } = useQuery(
     FIND_MANY_CAMERA,
     { fetchPolicy: "cache-and-network" }
   );
 
+  const datas = data?.findManyCamera[0]
+
   if (!loading) {
-    console.log(data.findManyCamera[0])
+    console.log(data?.findManyCamera[0])
   }
 
   return (
@@ -56,8 +70,10 @@ const App = () => {
         isMuted={false}
       /> */}
       {/* <div style={{width:'100%', height:'120%'}}> */}
-      <IframeTwitch source='https://www.iqair.com/air-quality-map?lat=61.97382&lng=129.75403&zoomLevel=10' />
-      <Iframe source='https://www.iqair.com/air-quality-map?lat=61.97382&lng=129.75403&zoomLevel=10' />
+      <div className="Cameraiconbox"><img className="Cameraicon" src={Icons} /></div>
+      <div className="fire"><div className="zindex" onClick={()=>{SwitchCameras(datas)}}><img className="fireicon" src={Fire} /></div></div>
+      <IframeTwitch source='https://www.iqair.com/air-quality-map?lat=61.528506&lng=111.798222&zoomLevel=10' />
+      <Iframe source='https://www.iqair.com/air-quality-map?lat=61.52850&lng=111.79822&zoomLevel=8' />
       {/* </div> */}
       {/* <div style={{width:'100vw', height:'100vh', position:'absolute', display:'flex', justifyContent:'space-between', flexDirection:'column'}}> */}
       {sizeFire == 0 ? null :
@@ -83,7 +99,7 @@ const App = () => {
               <InfoBox txtone="Вероятность распространения:" />
 
               <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                <img src={Img} alt={"Img"} className='img' />
+              <img src={Img} alt={"Img"} className='img' />
               </div>
             </div>
           </div>
