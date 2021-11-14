@@ -70,6 +70,8 @@ npm i
 
 python detect.py --source fire.mp4 --weights fire.pt --conf 0.55 || python detect.py --source smoke.mp4 --weights smoke.pt --conf 0.35
 
+Аналитика обучение и детектирование обьектов находится в папке runs
+
 РАЗРАБОТЧИКИ
 
 <h4>Оконешников Иван fullstack https://t.me/teseyoaoki9208 </h4>
