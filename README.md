@@ -66,6 +66,10 @@ npm run migrate
 npm i
 ~~~
 
+Запуск нейросети 
+
+python detect.py --source fire.mp4 --weights fire.pt --conf 0.55 || python detect.py --source smoke.mp4 --weights smoke.pt --conf 0.35
+
 РАЗРАБОТЧИКИ
 
 <h4>Оконешников Иван fullstack https://t.me/teseyoaoki9208 </h4>
