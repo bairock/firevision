@@ -17,7 +17,7 @@
     <li>ReactJS</li>
     <li>NodeJS</li>
     <li>GraphQL</li>
-    <li>TensorflowJS</li>
+    <li>Tensorflow</li>
     <li>YOLOv5</li>
 	<li>Python</li>
 	<li>JavaScript, Python</li>
