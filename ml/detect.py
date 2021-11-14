@@ -33,7 +33,9 @@ from utils.general import (LOGGER, check_file, check_img_size, check_imshow, che
                            increment_path, non_max_suppression, print_args, scale_coords, strip_optimizer, xyxy2xywh)
 from utils.plots import Annotator, colors, save_one_box
 from utils.torch_utils import select_device, time_sync
-
+import requests
+import json
+import pandas as pd
 
 @torch.no_grad()
 def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
@@ -172,10 +174,30 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
 
                         object_name = names[int(cls)]
 
+                        variables = {
+                            'data': { 
+                                'squares': [{
+                                    'x1': x1, 
+                                    'y1': y1, 
+                                    'x2': x2, 
+                                    'y2': y2  
+                                }]
+                            }
+                        }
 
+                        query = """
+                            mutation ($data:CameraUpdateInput!){
+                                updateOneCamera(where: { id: "0" }, data: $data){
+                                    id
+                                }
+                            }
+                        """
+                        
+                        req = requests.post('http://192.168.31.212:8000/', json={'query': query, 'variables': variables})
+                        
+                        print('req status', req.status_code)
                         print('bounding box is', x1, y1, x2, y2)
                         print('detected object name is', object_name)
-
 
 
             # Print time (inference-only)
